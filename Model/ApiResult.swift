@@ -14,7 +14,7 @@ struct ApiResult: Decodable {
 struct Forecast: Decodable {
     let dt: Int
     let main: Main
-    let weather: Weather
+    let weather: [Weather]
     let dt_txt: String
 }
 

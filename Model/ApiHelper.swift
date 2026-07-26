@@ -11,7 +11,7 @@ class ApiHelper {
     
     static let shared = ApiHelper()
     
-    private let apiKey = "Votre clé API"
+    private let apiKey = Secrets.weatherApi /// (🇫🇷Votre Clé API)   (🇬🇧Your API key)
     
     let base = "https://api.openweathermap.org/data/2.5/forecast"
     let units = "&units=metric"
@@ -25,6 +25,7 @@ class ApiHelper {
         var urlString = base
         urlString += coords
         urlString += lang
+        urlString += units
         urlString += appID
         print(urlString)
         return URL(string: urlString)
